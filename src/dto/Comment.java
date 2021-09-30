@@ -7,17 +7,16 @@ import lombok.Data;
 import lombok.NoArgsConstructor;
 
 @Data
-@AllArgsConstructor
 @NoArgsConstructor
-
-public class Freeboard {
+@AllArgsConstructor
+public class Comment {
 	private int idx;
+	private int mref;
 	private String name;
 	private String password;
-	private String subject;
 	private String content;
-	private int readCount;
 	private Timestamp wdate;
 	private String ip;
-	private short commentCount;
+	
+
 }
