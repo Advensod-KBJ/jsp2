@@ -30,13 +30,14 @@ public class PageDto {
 		this.currentPage=(currentPage < 1)? 1:currentPage;
 		
 		//mysql의 limit 사용할때
-		int startNo=(this.currentPage-1)*pageSize;
+		startNo=(this.currentPage-1)*pageSize;
 		
 		startPage = (this.currentPage-1)/10*10+1;
 		// 현재 페이지 57, startPage 50
 		// 현재 페이지 7, startPage 1
 		// 현재 페이지 156, startPage 
-		
+		endPage = startPage +9;
+		endPage = endPage > totalPage ? totalPage : endPage;
 	}
 
 }

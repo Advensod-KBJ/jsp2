@@ -43,7 +43,7 @@
 				<td colspan="2" align="center">
 				<input type="submit" value="저장" class="btn">
 				<input type="reset" value="다시쓰기" class="btn">
-				<input type="button" value="목록" onclick="location.href='listAction.jsp'" class="btn"></td>
+				<input type="button" value="목록" onclick="location.href='listAction.jsp?page=${page}'" class="btn"></td>
 			</tr>
 		</table>
 	</form>

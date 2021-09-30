@@ -9,6 +9,7 @@
 	String password = request.getParameter("password");
 	String content = request.getParameter("content");
 	String ip = request.getRemoteAddr();
+	int pageNo = Integer.parseInt(request.getParameter("page"));
 	
 	Freeboard dto = new Freeboard();
 	dto.setIp(ip);
@@ -20,7 +21,7 @@
 	
 	FreeboardDao dao = FreeboardDao.getInstance();
 	dao.insert(dto);
-	response.sendRedirect("listAction.jsp");
+	response.sendRedirect("listAction.jsp?page="+pageNo);
 	
 	
 %>
